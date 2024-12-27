@@ -1,0 +1,1095 @@
+  (Q)uit,   <ESC> Prev Menu,   <SPACE> Pause,   <ENTER> Re-Display Options
+
+C - Control Events     (ON )
+D - Data Events        (ON )
+E - EventID Info       (ON )
+H - Display ethernet   (OFF)
+I - Inbound Events     (ON )
+O - Outbound Events    (ON )
+S - Sender Info        (OFF)
+T - Timestamps         (ON )
+X - PDU Hexdump        (OFF)
+A - PDU Hex/Ascii      (OFF)
++/- Verbosity Level    (  3)
+L - Limit Context      (OFF)
+M - Match Newcalls     (ON )
+R - RADIUS Dict        (no-override)
+G - GTPP Dict          (no-override)
+P - ECS Dynamic DDL    (OFF)
+Y - Multi-Call Trace   (OFF)
+
+  (Q)uit,   <ESC> Prev Menu,   <SPACE> Pause,   <ENTER> Re-Display Options
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:178 Eventid:122903(3)
+IKEv2 Rx PDU, from 1.0.238.141:500 to 10.10.221.4:500 (504)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x0000000000000000
+    Next Payload   (U08): SA/33 (0x21)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_SA_INIT/34 (0x22)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Initiator/1 (0x01)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 0
+    Reserved       (U02): 0
+    MSGID          (U32): 0
+    Length         (U32): 504 (0x1F8) bytes
++ SA Payload Processed-Dump, HBO (Length: 48 (0x30) bytes)
+    Next Payload   (U08): KE/34 (0x22)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 48 (0x30) bytes
+    Proposal Substructure:
+      Last                 (U08): Yes/0 (0x00)
+      Reserved             (U08): 0
+      Proposal Length      (U16): 44 (0x2C) bytes
+      Proposal Number      (U08): 1
+      Protocol ID          (U08): IKE/1 (0x01)
+      SPI Size             (U08): 0 (0x0) bytes
+      Number of Transforms (U08): 4
+      Transform Header #1
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 12 (0xC) bytes
+        Transform Type       (U08): ENCR/1 (0x01)
+        Reserved             (U08): 0
+        Transform ID         (U16): ENCR_AES_CBC/12 (0x000C)
+        Attribute
+          Attribute AF         (U01): 1
+          Attribute Type       (U15): IKEV2_TS_ATTRIBUTE_TYPE_KEY_LENGTH/14 (0x0E)
+          Attribute Value      (U16): 128 (0x0080)
+      Transform Header #2
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): INTEG/3 (0x03)
+        Reserved             (U08): 0
+        Transform ID         (U16): AUTH_HMAC_SHA2_256_128/12 (0x000C)
+      Transform Header #3
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): PRF/2 (0x02)
+        Reserved             (U08): 0
+        Transform ID         (U16): PRF_HMAC_SHA2_256/5 (0x0005)
+      Transform Header #4
+        Last                 (U08): Yes/0 (0x00)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): DHGROUP/4 (0x04)
+        Reserved             (U08): 0
+        Transform ID         (U16): DHGROUP_15/15 (0x000F)
++ KE Payload Processed-Dump, HBO (Length: 392 (0x188) bytes)
+    Next Payload   (U08): NONCE/40 (0x28)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 392 (0x188) bytes
+    DH Group (U16): DHGROUP_15/15 (0x000F)
+    Reserved (U16): 0
++ NONCE Payload Processed-Dump, HBO (Length: 36 (0x24) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 36 (0x24) bytes
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:346 Eventid:122904(3)
+IKEv2 Tx PDU, from 10.10.221.4:500 to 1.0.238.141:500 (488)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): SA/33 (0x21)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_SA_INIT/34 (0x22)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Responder/0 (0x00)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 1
+    Reserved       (U02): 0
+    MSGID          (U32): 0
+    Length         (U32): 488 (0x1E8) bytes
++ SA Payload Processed-Dump, HBO (Length: 48 (0x30) bytes)
+    Next Payload   (U08): KE/34 (0x22)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 48 (0x30) bytes
+    Proposal Substructure:
+      Last                 (U08): Yes/0 (0x00)
+      Reserved             (U08): 0
+      Proposal Length      (U16): 44 (0x2C) bytes
+      Proposal Number      (U08): 1
+      Protocol ID          (U08): IKE/1 (0x01)
+      SPI Size             (U08): 0 (0x0) bytes
+      Number of Transforms (U08): 4
+      Transform Header #1
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 12 (0xC) bytes
+        Transform Type       (U08): ENCR/1 (0x01)
+        Reserved             (U08): 0
+        Transform ID         (U16): ENCR_AES_CBC/12 (0x000C)
+        Attribute
+          Attribute AF         (U01): 1
+          Attribute Type       (U15): IKEV2_TS_ATTRIBUTE_TYPE_KEY_LENGTH/14 (0x0E)
+          Attribute Value      (U16): 128 (0x0080)
+      Transform Header #2
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): PRF/2 (0x02)
+        Reserved             (U08): 0
+        Transform ID         (U16): PRF_HMAC_SHA2_256/5 (0x0005)
+      Transform Header #3
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): INTEG/3 (0x03)
+        Reserved             (U08): 0
+        Transform ID         (U16): AUTH_HMAC_SHA2_256_128/12 (0x000C)
+      Transform Header #4
+        Last                 (U08): Yes/0 (0x00)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): DHGROUP/4 (0x04)
+        Reserved             (U08): 0
+        Transform ID         (U16): DHGROUP_15/15 (0x000F)
++ KE Payload Processed-Dump, HBO (Length: 392 (0x188) bytes)
+    Next Payload   (U08): NONCE/40 (0x28)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 392 (0x188) bytes
+    DH Group (U16): DHGROUP_15/15 (0x000F)
+    Reserved (U16): 0
++ NONCE Payload Processed-Dump, HBO (Length: 20 (0x14) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 20 (0x14) bytes
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:549 Eventid:122903(3)
+IKEv2 Rx PDU, from 1.0.238.141:500 to 10.10.221.4:500 (240)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): IDi/35 (0x23)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Initiator/1 (0x01)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 0
+    Reserved       (U02): 0
+    MSGID          (U32): 1
+    Length         (U32): 187 (0xBB) bytes
++ ID Payload Processed-Dump, HBO (Length: 34 (0x22) bytes)
+    Next Payload   (U08): IDr/36 (0x24)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 34 (0x22) bytes
+    ID Type   (U08): IKEV2_ID_TYPE_RFC822_ADDR/3 (0x03)
+    Reserved0 (U08): 0
+    Reserved1 (U08): 0
+    Reserved2 (U08): 0
+    ID:       (U208): 0200560000000001@syfer.com
++ ID Payload Processed-Dump, HBO (Length: 21 (0x15) bytes)
+    Next Payload   (U08): CP/47 (0x2F)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 21 (0x15) bytes
+    ID Type   (U08): IKEV2_ID_TYPE_FQDN/2 (0x02)
+    Reserved0 (U08): 0
+    Reserved1 (U08): 0
+    Reserved2 (U08): 0
+    ID:       (U104): apn1.3gpp.com
++ CP Payload Processed-Dump, HBO (Length: 12 (0xC) bytes)
+    Next Payload   (U08): SA/33 (0x21)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 12 (0xC) bytes
+    CFG Type  (U08): CFG_REQUEST/1 (0x01)
+    Reserved0 (U08): 0
+    Reserved1 (U08): 0
+    Reserved2 (U08): 0
+    Configuration Attributes:
+    Attribute #1:
+      Reserved0        (U01): 0
+      Attribute Type   (U15): IKEV2_CFG_ATTRIBUTE_INTERNAL_IP4_ADDRESS/1 (0x01)
+      Attribute Length (U16): 0 (0x0) bytes
++ SA Payload Processed-Dump, HBO (Length: 44 (0x2C) bytes)
+    Next Payload   (U08): TSi/44 (0x2C)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 44 (0x2C) bytes
+    Proposal Substructure:
+      Last                 (U08): Yes/0 (0x00)
+      Reserved             (U08): 0
+      Proposal Length      (U16): 40 (0x28) bytes
+      Proposal Number      (U08): 1
+      Protocol ID          (U08): ESP/3 (0x03)
+      SPI Size             (U08): 4 (0x4) bytes
+      Number of Transforms (U08): 3
+      SPI:                 (U32): 0x10000101
+      Transform Header #1
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 12 (0xC) bytes
+        Transform Type       (U08): ENCR/1 (0x01)
+        Reserved             (U08): 0
+        Transform ID         (U16): ENCR_AES_CBC/12 (0x000C)
+        Attribute
+          Attribute AF         (U01): 1
+          Attribute Type       (U15): IKEV2_TS_ATTRIBUTE_TYPE_KEY_LENGTH/14 (0x0E)
+          Attribute Value      (U16): 128 (0x0080)
+      Transform Header #2
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): INTEG/3 (0x03)
+        Reserved             (U08): 0
+        Transform ID         (U16): AUTH_HMAC_SHA2_256_128/12 (0x000C)
+      Transform Header #3
+        Last                 (U08): Yes/0 (0x00)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): ESN/5 (0x05)
+        Reserved             (U08): 0
+        Transform ID         (U16): ESN_NO/0 (0x0000)
++ TS Payload Processed-Dump, HBO (Length: 24 (0x18) bytes)
+    Next Payload   (U08): TSr/45 (0x2D)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 24 (0x18) bytes
+    Number of TSELS (U08): 1
+    Reserved0       (U08): 0
+    Reserved1       (U08): 0
+    Reserved2       (U08): 0
+    Traffic Selector #0:
+      TS Type          (U08): TS_IPV4_ADDR_RANGE/7 (0x07)
+      IP Protocol ID   (U08): 0
+      Selector Length  (U16): 16
+      Start Port       (U16): 0
+      End Port         (U16): 65535
+      Starting Address (U32): 0.0.0.0
+      Ending Address   (U32): 255.255.255.255
++ TS Payload Processed-Dump, HBO (Length: 24 (0x18) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 24 (0x18) bytes
+    Number of TSELS (U08): 1
+    Reserved0       (U08): 0
+    Reserved1       (U08): 0
+    Reserved2       (U08): 0
+    Traffic Selector #0:
+      TS Type          (U08): TS_IPV4_ADDR_RANGE/7 (0x07)
+      IP Protocol ID   (U08): 0
+      Selector Length  (U16): 16
+      Start Port       (U16): 0
+      End Port         (U16): 65535
+      Starting Address (U32): 0.0.0.0
+      Ending Address   (U32): 255.255.255.255
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:602 Eventid:81990(5)
+Diameter message from 1.0.234.6:56706 to 1.0.240.43:3868
+  Base Header Information:
+   Version: 1
+   Message Length: 312
+   Command Flags: REQ PXY   (192)
+   Command Code: Diameter-EAP-Request (268)
+   Application ID: Diameter-Common-Message (16777264)
+   Hop2Hop-ID: 0xadb00042
+   End2End-ID: 0x02bb4883
+  AVP Information:
+        [M] Session-Id: rtp-vpc;100020003;533;573f56b6-1503
+        [M] Origin-Host: rtp-vpc
+        [M] Origin-Realm: neph.com
+        [M] Destination-Realm: neph.com
+        [M] Origin-State-Id: 1463717703
+        [M] Auth-Application-Id: 16777264
+        [M] Auth-Request-Type: AUTHORIZE_AUTHENTICATE (3)
+        [M] EAP-Payload:
+               EAP Code: Response (2)
+               EAP Identifier: 1
+               EAP Length: 0x001f (31)
+               EAP Type: 0x01 (1)
+               EAP Data:
+                              30 32 30
+               30 35 36 30 30 30 30 30
+               30 30 30 30 31 40 73 79
+               66 65 72 2e 63 6f 6d
+        [M] Auth-Session-State: STATE_MAINTAINED (0)
+        [M] User-Name: 0200560000000001@syfer.com
+        [V] [M] RAT-Type: WLAN (0)
+        [M] Service-Selection: apn1.3gpp.com
+        [V] Origination-TimeStamp: 3672757558601 - Fri May 20 14:25:58 2016
+              Milliseconds: 601
+        [V] Max-Wait-Time: 30000
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:604 Eventid:81991(5)
+Diameter message from 1.0.240.43:3868 to 1.0.234.6:56706
+  Base Header Information:
+   Version: 1
+   Message Length: 580
+   Command Flags:  PXY   (64)
+   Command Code: Diameter-EAP-Answer (268)
+   Application ID: Diameter-Common-Message (16777264)
+   Hop2Hop-ID: 0xadb00042
+   End2End-ID: 0x02bb4883
+  AVP Information:
+        [M] Session-Id: rtp-vpc;100020003;533;573f56b6-1503
+        [M] Auth-Application-Id: 16777264
+        [M] Result-Code: DIAMETER_MULTI_ROUND_AUTH (1001)
+        [M] Origin-Host: rtp-aaa.minid
+        [M] Origin-Realm: neph.com
+        [M] Auth-Request-Type: AUTHORIZE_AUTHENTICATE (3)
+        [M] EAP-Payload:
+               EAP Code: Request (1)
+               EAP Identifier: 136
+               EAP Length: 0x0044 (68)
+               EAP Type: 0x17 (23)
+               EAP Data:
+                              01 00 00
+               01 05 00 00 81 e9 2b 6c
+               0e e0 e1 2e bc eb a8 d9
+               2a 99 df a5 02 05 00 00
+               11 37 88 d3 83 24 00 01
+               c5 a8 46 c7 4b d7 41 fe
+               0b 05 00 00 a6 85 e3 a2
+               5f c6 08 72 62 46 6b ee
+               b1 01 76 10
+        [M] User-Name: 0200560000000001@syfer.com
+        [M] Session-Timeout: 36000
+        [V] [M] APN-Configuration:
+          [V] [M] Context-Identifier: 1122
+          [V] [M] PDN-Type: IPv4v6 (2)
+          [M] Service-Selection: apn1.3gpp.com
+          [V] [M] EPS-Subscribed-QoS-Profile:
+            [V] [M] QoS-Class-Identifier: TRAFFIC_CLASS_I (9)
+            [V] [M] Allocation-Retention-Priority:
+              [V] [M] Priority-Level: 10
+              [V] [M] Pre-emption-Vulnerability: PRE-EMPTION_VULNERABILITY_DISABLED (1)
+          [V] [M] VPLMN-Dynamic-Address-Allowed: NOTALLOWED (0)
+          [M] MIP6-Agent-Info:
+            [M] MIP-Home-Agent-Address-IETF: IPv4 10.10.216.4
+          [V] [M] 3GPP-Charging-Characteristics: 0800
+          [V] [M] AMBR:
+            [V] [M] Max-Requested-Bandwidth-UL: 1024000000
+            [V] [M] Max-Requested-Bandwidth-DL: 1024000000
+        [M] Authorization-Lifetime: 36000
+        [M] Subscription-Id:
+          [M] Subscription-Id-Type: END_USER_E164 (0)
+          [M] Subscription-Id-Data: 9876543240
+        [M] Auth-Grace-Period: 150
+        [M] Auth-Session-State: STATE_MAINTAINED (0)
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:605 Eventid:122904(3)
+IKEv2 Tx PDU, from 10.10.221.4:500 to 1.0.238.141:500 (112)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): IDr/36 (0x24)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Responder/0 (0x00)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 1
+    Reserved       (U02): 0
+    MSGID          (U32): 1
+    Length         (U32): 112 (0x70) bytes
++ ID Payload Processed-Dump, HBO (Length: 12 (0xC) bytes)
+    Next Payload   (U08): EAP/48 (0x30)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 12 (0xC) bytes
+    ID Type   (U08): IKEV2_ID_TYPE_IPV4_ADDR/1 (0x01)
+    Reserved0 (U08): 0
+    Reserved1 (U08): 0
+    Reserved2 (U08): 0
+    ID:       (U32): 10.10.221.4
++ EAP Payload Processed-Dump, HBO (Length: 72 (0x48) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 72 (0x48) bytes
+    EAP Message:
+        Code       (U08): IKEV2_EAP_PAYLOAD_CODE_REQUEST/1 (0x01)
+        Identifier (U08): 136 (0x88)
+        Length     (U16): 68 (0x44) bytes
+        Type       (U08): IKEV2_EAP_PAYLOAD_TYPE_AKA/23 (0x17)
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:606 Eventid:122903(3)
+IKEv2 Rx PDU, from 1.0.238.141:500 to 10.10.221.4:500 (128)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): EAP/48 (0x30)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Initiator/1 (0x01)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 0
+    Reserved       (U02): 0
+    MSGID          (U32): 2
+    Length         (U32): 76 (0x4C) bytes
++ EAP Payload Processed-Dump, HBO (Length: 48 (0x30) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 48 (0x30) bytes
+    EAP Message:
+        Code       (U08): IKEV2_EAP_PAYLOAD_CODE_RESPONSE/2 (0x02)
+        Identifier (U08): 136 (0x88)
+        Length     (U16): 44 (0x2C) bytes
+        Type       (U08): IKEV2_EAP_PAYLOAD_TYPE_AKA/23 (0x17)
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:607 Eventid:81990(5)
+Diameter message from 1.0.234.6:56706 to 1.0.240.43:3868
+  Base Header Information:
+   Version: 1
+   Message Length: 312
+   Command Flags: REQ PXY   (192)
+   Command Code: Diameter-EAP-Request (268)
+   Application ID: Diameter-Common-Message (16777264)
+   Hop2Hop-ID: 0xadb00043
+   End2End-ID: 0x02bb4884
+  AVP Information:
+        [M] Session-Id: rtp-vpc;100020003;533;573f56b6-1503
+        [M] Origin-Host: rtp-vpc
+        [M] Origin-Realm: neph.com
+        [M] Destination-Realm: neph.com
+        [M] Destination-Host: rtp-aaa.minid
+        [M] Origin-State-Id: 1463717703
+        [M] Auth-Application-Id: 16777264
+        [M] Auth-Request-Type: AUTHORIZE_AUTHENTICATE (3)
+        [M] EAP-Payload:
+               EAP Code: Response (2)
+               EAP Identifier: 136
+               EAP Length: 0x002c (44)
+               EAP Type: 0x17 (23)
+               EAP Data:
+                              01 00 00
+               03 03 00 40 b7 f6 9f a4
+               c8 b3 c7 d3 86 01 00 00
+               0b 05 00 00 c0 af 69 97
+               42 22 e8 fb 7b be 56 ca
+               a4 be 46 18
+        [M] Auth-Session-State: STATE_MAINTAINED (0)
+        [M] User-Name: 0200560000000001@syfer.com
+        [V] [M] RAT-Type: WLAN (0)
+        [M] Service-Selection: apn1.3gpp.com
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:607 Eventid:81991(5)
+Diameter message from 1.0.240.43:3868 to 1.0.234.6:56706
+  Base Header Information:
+   Version: 1
+   Message Length: 588
+   Command Flags:  PXY   (64)
+   Command Code: Diameter-EAP-Answer (268)
+   Application ID: Diameter-Common-Message (16777264)
+   Hop2Hop-ID: 0xadb00043
+   End2End-ID: 0x02bb4884
+  AVP Information:
+        [M] Session-Id: rtp-vpc;100020003;533;573f56b6-1503
+        [M] Auth-Application-Id: 16777264
+        [M] Result-Code: DIAMETER_SUCCESS (2001)
+        [M] Origin-Host: rtp-aaa.minid
+        [M] Origin-Realm: neph.com
+        [M] Auth-Request-Type: AUTHORIZE_AUTHENTICATE (3)
+        [M] EAP-Payload:
+               EAP Code: Success (3)
+               EAP Identifier: 136
+               EAP Length: 0x0004 (4)
+               EAP Type: 0x00 (0)
+               EAP Data:
+        [M] User-Name: 0200560000000001@syfer.com
+        [M] Session-Timeout: 36000
+        [M] EAP-Master-Session-Key:
+               60 d2 4a 29 80 8b eb ec   `.J)....
+               a8 88 2f a2 ae 3d a3 7a   ../..=.z
+               ff 11 4b c1 16 1f 8f 09   ..K.....
+               6b dc b5 21 11 38 f0 57   k..!.8.W
+               48 e9 d3 51 e0 a1 e8 53   H..Q...S
+               14 e3 62 ed 80 71 2f 00   ..b..q/.
+               96 a7 f2 24 fd de 0c 18   ...$....
+               8b fc b7 07 5c 59 d3 6c   ....\Y.l
+        [V] [M] APN-Configuration:
+          [V] [M] Context-Identifier: 1122
+          [V] [M] PDN-Type: IPv4v6 (2)
+          [M] Service-Selection: apn1.3gpp.com
+          [V] [M] EPS-Subscribed-QoS-Profile:
+            [V] [M] QoS-Class-Identifier: TRAFFIC_CLASS_I (9)
+            [V] [M] Allocation-Retention-Priority:
+              [V] [M] Priority-Level: 10
+              [V] [M] Pre-emption-Vulnerability: PRE-EMPTION_VULNERABILITY_DISABLED (1)
+          [V] [M] VPLMN-Dynamic-Address-Allowed: NOTALLOWED (0)
+          [M] MIP6-Agent-Info:
+            [M] MIP-Home-Agent-Address-IETF: IPv4 10.10.216.4
+          [V] [M] 3GPP-Charging-Characteristics: 0800
+          [V] [M] AMBR:
+            [V] [M] Max-Requested-Bandwidth-UL: 1024000000
+            [V] [M] Max-Requested-Bandwidth-DL: 1024000000
+        [M] Authorization-Lifetime: 36000
+        [M] Subscription-Id:
+          [M] Subscription-Id-Type: END_USER_E164 (0)
+          [M] Subscription-Id-Data: 9876543240
+        [M] Auth-Grace-Period: 150
+        [M] Auth-Session-State: STATE_MAINTAINED (0)
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:607 Eventid:122904(3)
+IKEv2 Tx PDU, from 10.10.221.4:500 to 1.0.238.141:500 (36)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): EAP/48 (0x30)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Responder/0 (0x00)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 1
+    Reserved       (U02): 0
+    MSGID          (U32): 2
+    Length         (U32): 36 (0x24) bytes
++ EAP Payload Processed-Dump, HBO (Length: 8 (0x8) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 8 (0x8) bytes
+    EAP Message:
+        Code       (U08): IKEV2_EAP_PAYLOAD_CODE_SUCCESS/3 (0x03)
+        Identifier (U08): 136 (0x88)
+        Length     (U16): 4 (0x4) bytes
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:608 Eventid:122903(3)
+IKEv2 Rx PDU, from 1.0.238.141:500 to 10.10.221.4:500 (112)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): AUTH/39 (0x27)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Initiator/1 (0x01)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 0
+    Reserved       (U02): 0
+    MSGID          (U32): 3
+    Length         (U32): 68 (0x44) bytes
++ AUTH Payload Processed-Dump, HBO (Length: 40 (0x28) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 40 (0x28) bytes
+    Auth Method (U08): SHARED_KEY_MESSAGE_INTEGRITY_CODE/2 (0x02)
+    Reserved0   (U08): 0
+    Reserved1   (U08): 0
+    Reserved2   (U08): 0
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:611 Eventid:141005(3)
+[ePDG-S2b]GTPv2C Tx PDU, from 10.10.223.4:30336 to 10.10.216.4:2123 (180)
+TEID: 0x00000000, Message type: EGTP_CREATE_SESSION_REQUEST (0x20)
+Sequence Number: 0x000015 (21)
+GTP HEADER
+        Version number: 2
+        TEID flag: Present
+        Piggybacking flag: Not present
+        Message Length: 0x00B0 (176)
+
+INFORMATION ELEMENTS
+        IMSI:
+            Value: 200560000000001
+
+        MSISDN:
+            Value: 9876543240
+
+        SERVING NETWORK:
+            Value:
+                MCC: 200
+                MNC: 56
+
+        RADIO ACCESS TECH:
+            Value: WLAN (3)
+
+        ePDG S2b CNTRL TEID:
+            Value:
+                Interface: ePDG S2b CNTRL
+                IPv4 Flag: 1
+                IPv6 Flag: 0
+                Teid: 0x80000015
+                IPV4 Addr: 10.10.223.4
+
+        ACCESS POINT NAME:
+            Value: apn1.3gpp.com.mnc056.mcc200.gprs
+
+        SELECTION MODE:
+            Value: MS or network provided APN,subscr verified (0x00)
+
+        PDN ADDRESS ALLOC:
+            Value:
+                PDN Type: IPV4
+                IPV4 Addr: 0.0.0.0
+
+        AGGREGATE MAX BIT RATE:
+            Value:
+                Uplk AMBR: 1024000 kbps
+                Dnlk AMBR: 1024000 kbps
+
+        BEARER CONTEXT TO BE CREATED:
+            Value:
+                EPS BEARER ID:
+                    Value: 5
+
+                ePDG S2b DATA TEID:
+                    Value:
+                        Interface: ePDG S2b DATA
+                        IPv4 Flag: 1
+                        IPv6 Flag: 0
+                        Teid: 0x80000015
+                        IPV4 Addr: 10.10.223.4
+
+                BEARER QOS:
+                    Value:
+                        ARP: PCI = 0 (Enabled), PL = 10, PVI = 1 (Disabled)
+                        QCI: 9
+                        Uplnk MBR: 0 kbps
+                        Dnlnk MBR: 0 kbps
+                        Uplnk GBR: 0 kbps
+                        Dnlnk GBR: 0 kbps
+
+
+        RECOVERY:
+            Value: 0x09 (9)
+
+        CHARGING CHAR:
+            Value: 0x0800
+
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:613 Eventid:141004(3)
+[PGW-S5/S2a/S2b]GTPv2C Rx PDU, from 10.10.223.4:30336 to 10.10.216.4:2123 (180)
+TEID: 0x00000000, Message type: EGTP_CREATE_SESSION_REQUEST (0x20)
+Sequence Number: 0x000015 (21)
+GTP HEADER
+        Version number: 2
+        TEID flag: Present
+        Piggybacking flag: Not present
+        Message Length: 0x00B0 (176)
+
+INFORMATION ELEMENTS
+        IMSI:
+            Value: 200560000000001
+
+        MSISDN:
+            Value: 9876543240
+
+        SERVING NETWORK:
+            Value:
+                MCC: 200
+                MNC: 56
+
+        RADIO ACCESS TECH:
+            Value: WLAN (3)
+
+        ePDG S2b CNTRL TEID:
+            Value:
+                Interface: ePDG S2b CNTRL
+                IPv4 Flag: 1
+                IPv6 Flag: 0
+                Teid: 0x80000015
+                IPV4 Addr: 10.10.223.4
+
+        ACCESS POINT NAME:
+            Value: apn1.3gpp.com.mnc056.mcc200.gprs
+
+        SELECTION MODE:
+            Value: MS or network provided APN,subscr verified (0x00)
+
+        PDN ADDRESS ALLOC:
+            Value:
+                PDN Type: IPV4
+                IPV4 Addr: 0.0.0.0
+
+        AGGREGATE MAX BIT RATE:
+            Value:
+                Uplk AMBR: 1024000 kbps
+                Dnlk AMBR: 1024000 kbps
+
+        BEARER CONTEXT TO BE CREATED:
+            Value:
+                EPS BEARER ID:
+                    Value: 5
+
+                ePDG S2b DATA TEID:
+                    Value:
+                        Interface: ePDG S2b DATA
+                        IPv4 Flag: 1
+                        IPv6 Flag: 0
+                        Teid: 0x80000015
+                        IPV4 Addr: 10.10.223.4
+
+                BEARER QOS:
+                    Value:
+                        ARP: PCI = 0 (Enabled), PL = 10, PVI = 1 (Disabled)
+                        QCI: 9
+                        Uplnk MBR: 0 kbps
+                        Dnlnk MBR: 0 kbps
+                        Uplnk GBR: 0 kbps
+                        Dnlnk GBR: 0 kbps
+
+
+        RECOVERY:
+            Value: 0x09 (9)
+
+        CHARGING CHAR:
+            Value: 0x0800
+
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:634 Eventid:141005(3)
+[PGW-S5/S2a/S2b]GTPv2C Tx PDU, from 10.10.216.4:2123 to 10.10.223.4:30336 (93)
+TEID: 0x80000015, Message type: EGTP_CREATE_SESSION_RESPONSE (0x21)
+Sequence Number: 0x000015 (21)
+GTP HEADER
+        Version number: 2
+        TEID flag: Present
+        Piggybacking flag: Not present
+        Message Length: 0x0059 (89)
+
+INFORMATION ELEMENTS
+        CAUSE:
+            Value:
+                Cause: EGTP_CAUSE_REQ_ACCEPTED (0x10)
+                PCE: 0
+                BCE: 0
+                CS: 0
+
+        PGW S2b CNTRL TEID:
+            Value:
+                Interface: PGW S2b CNTRL
+                IPv4 Flag: 1
+                IPv6 Flag: 0
+                Teid: 0x80002015
+                IPV4 Addr: 10.10.216.4
+
+        PDN ADDRESS ALLOC:
+            Value:
+                PDN Type: IPV4
+                IPV4 Addr: 2.2.0.1
+
+        AGGREGATE MAX BIT RATE:
+            Value:
+                Uplk AMBR: 1024000 kbps
+                Dnlk AMBR: 1024000 kbps
+
+        BEARER CONTEXT CREATED:
+            Value:
+                EPS BEARER ID:
+                    Value: 5
+
+                CAUSE:
+                    Value:
+                        Cause: EGTP_CAUSE_REQ_ACCEPTED (0x10)
+                        PCE: 0
+                        BCE: 0
+                        CS: 0
+
+                PGW S2b DATA TEID:
+                    Value:
+                        Interface: PGW S2b DATA
+                        IPv4 Flag: 1
+                        IPv6 Flag: 0
+                        Teid: 0x80002015
+                        IPV4 Addr: 10.10.216.4
+
+                CHARGING ID:
+                    Value: 0x0238E38D
+
+
+        RECOVERY:
+            Value: 0x09 (9)
+
+
+
+Friday May 20 2016
+INBOUND>>>>>  14:25:58:640 Eventid:141004(3)
+[ePDG-S2b]GTPv2C Rx PDU, from 10.10.216.4:2123 to 10.10.223.4:30336 (93)
+TEID: 0x80000015, Message type: EGTP_CREATE_SESSION_RESPONSE (0x21)
+Sequence Number: 0x000015 (21)
+GTP HEADER
+        Version number: 2
+        TEID flag: Present
+        Piggybacking flag: Not present
+        Message Length: 0x0059 (89)
+
+INFORMATION ELEMENTS
+        CAUSE:
+            Value:
+                Cause: EGTP_CAUSE_REQ_ACCEPTED (0x10)
+                PCE: 0
+                BCE: 0
+                CS: 0
+
+        PGW S2b CNTRL TEID:
+            Value:
+                Interface: PGW S2b CNTRL
+                IPv4 Flag: 1
+                IPv6 Flag: 0
+                Teid: 0x80002015
+                IPV4 Addr: 10.10.216.4
+
+        PDN ADDRESS ALLOC:
+            Value:
+                PDN Type: IPV4
+                IPV4 Addr: 2.2.0.1
+
+        AGGREGATE MAX BIT RATE:
+            Value:
+                Uplk AMBR: 1024000 kbps
+                Dnlk AMBR: 1024000 kbps
+
+        BEARER CONTEXT CREATED:
+            Value:
+                EPS BEARER ID:
+                    Value: 5
+
+                CAUSE:
+                    Value:
+                        Cause: EGTP_CAUSE_REQ_ACCEPTED (0x10)
+                        PCE: 0
+                        BCE: 0
+                        CS: 0
+
+                PGW S2b DATA TEID:
+                    Value:
+                        Interface: PGW S2b DATA
+                        IPv4 Flag: 1
+                        IPv6 Flag: 0
+                        Teid: 0x80002015
+                        IPV4 Addr: 10.10.216.4
+
+                CHARGING ID:
+                    Value: 0x0238E38D
+
+
+        RECOVERY:
+            Value: 0x09 (9)
+
+
+
+Friday May 20 2016
+<<<<OUTBOUND  14:25:58:655 Eventid:122904(3)
+IKEv2 Tx PDU, from 10.10.221.4:500 to 1.0.238.141:500 (176)
++ IKE Header Processed-Dump, HBO (Length: 28 (0x1C) bytes)
+    Initiator SPI  (U64): 0x0000000100000001
+    Responder SPI  (U64): 0x34B1B14476884A9F
+    Next Payload   (U08): AUTH/39 (0x27)
+    Major Version  (U04): 2
+    Minor Version  (U04): 0
+    XCHG Type      (U08): IKE_AUTH/35 (0x23)
+    Reserved       (U03): 0
+    Initiator Flag (U01): Responder/0 (0x00)
+    Version Flag   (U01): 0
+    Response Flag  (U01): 1
+    Reserved       (U02): 0
+    MSGID          (U32): 3
+    Length         (U32): 176 (0xB0) bytes
++ AUTH Payload Processed-Dump, HBO (Length: 40 (0x28) bytes)
+    Next Payload   (U08): CP/47 (0x2F)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 40 (0x28) bytes
+    Auth Method (U08): SHARED_KEY_MESSAGE_INTEGRITY_CODE/2 (0x02)
+    Reserved0   (U08): 0
+    Reserved1   (U08): 0
+    Reserved2   (U08): 0
++ CP Payload Processed-Dump, HBO (Length: 16 (0x10) bytes)
+    Next Payload   (U08): SA/33 (0x21)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 16 (0x10) bytes
+    CFG Type  (U08): CFG_REPLY/2 (0x02)
+    Reserved0 (U08): 0
+    Reserved1 (U08): 0
+    Reserved2 (U08): 0
+    Configuration Attributes:
+    Attribute #1:
+      Reserved0        (U01): 0
+      Attribute Type   (U15): IKEV2_CFG_ATTRIBUTE_INTERNAL_IP4_ADDRESS/1 (0x01)
+      Attribute Length (U16): 4 (0x4) bytes
+      IP Address            : 2.2.0.1
++ SA Payload Processed-Dump, HBO (Length: 44 (0x2C) bytes)
+    Next Payload   (U08): TSi/44 (0x2C)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 44 (0x2C) bytes
+    Proposal Substructure:
+      Last                 (U08): Yes/0 (0x00)
+      Reserved             (U08): 0
+      Proposal Length      (U16): 40 (0x28) bytes
+      Proposal Number      (U08): 1
+      Protocol ID          (U08): ESP/3 (0x03)
+      SPI Size             (U08): 4 (0x4) bytes
+      Number of Transforms (U08): 3
+      SPI:                 (U32): 0x0100C043
+      Transform Header #1
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 12 (0xC) bytes
+        Transform Type       (U08): ENCR/1 (0x01)
+        Reserved             (U08): 0
+        Transform ID         (U16): ENCR_AES_CBC/12 (0x000C)
+        Attribute
+          Attribute AF         (U01): 1
+          Attribute Type       (U15): IKEV2_TS_ATTRIBUTE_TYPE_KEY_LENGTH/14 (0x0E)
+          Attribute Value      (U16): 128 (0x0080)
+      Transform Header #2
+        Last                 (U08): No/3 (0x03)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): INTEG/3 (0x03)
+        Reserved             (U08): 0
+        Transform ID         (U16): AUTH_HMAC_SHA2_256_128/12 (0x000C)
+      Transform Header #3
+        Last                 (U08): Yes/0 (0x00)
+        Reserved             (U08): 0
+        Transform Length     (U16): 8 (0x8) bytes
+        Transform Type       (U08): ESN/5 (0x05)
+        Reserved             (U08): 0
+        Transform ID         (U16): ESN_NO/0 (0x0000)
++ TS Payload Processed-Dump, HBO (Length: 24 (0x18) bytes)
+    Next Payload   (U08): TSr/45 (0x2D)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 24 (0x18) bytes
+    Number of TSELS (U08): 1
+    Reserved0       (U08): 0
+    Reserved1       (U08): 0
+    Reserved2       (U08): 0
+    Traffic Selector #0:
+      TS Type          (U08): TS_IPV4_ADDR_RANGE/7 (0x07)
+      IP Protocol ID   (U08): 0
+      Selector Length  (U16): 16
+      Start Port       (U16): 0
+      End Port         (U16): 65535
+      Starting Address (U32): 2.2.0.1
+      Ending Address   (U32): 2.2.0.1
++ TS Payload Processed-Dump, HBO (Length: 24 (0x18) bytes)
+    Next Payload   (U08): NO_NEXT_PAYLOAD/0 (0x00)
+    Critical       (U01): 0
+    Reserved       (U07): 0
+    Payload Length (U16): 24 (0x18) bytes
+    Number of TSELS (U08): 1
+    Reserved0       (U08): 0
+    Reserved1       (U08): 0
+    Reserved2       (U08): 0
+    Traffic Selector #0:
+      TS Type          (U08): TS_IPV4_ADDR_RANGE/7 (0x07)
+      IP Protocol ID   (U08): 0
+      Selector Length  (U16): 16
+      Start Port       (U16): 0
+      End Port         (U16): 65535
+      Starting Address (U32): 0.0.0.0
+      Ending Address   (U32): 255.255.255.255
+
+
+
+[local]DI-EPDG#
+[local]DI-EPDG#
+[local]DI-EPDG#
+[local]DI-EPDG# sho sub all
+Friday May 20 14:26:07 EDT 2016
++-----Access  (S) - pdsn-simple-ip     (M) - pdsn-mobile-ip  (H) - ha-mobile-ip
+|     Type:   (P) - ggsn-pdp-type-ppp  (h) - ha-ipsec        (N) - lns-l2tp
+|             (I) - ggsn-pdp-type-ipv4                       (G) - IPSG
+|             (V) - ggsn-pdp-type-ipv6                       (C) - cscf-sip
+|             (z) - ggsn-pdp-type-ipv4v6                     (A) - X2GW
+|             (R) - sgw-gtp-ipv4       (O) - sgw-gtp-ipv6    (Q) - sgw-gtp-ipv4-ipv6
+|             (W) - pgw-gtp-ipv4       (Y) - pgw-gtp-ipv6    (Z) - pgw-gtp-ipv4-ipv6
+|             (@) - saegw-gtp-ipv4     (#) - saegw-gtp-ipv6  ($) - saegw-gtp-ipv4-ipv6
+|             (&) - samog-ip           (^) - cgw-gtp-ipv6    (*) - cgw-gtp-ipv4-ipv6
+|             (p) - sgsn-pdp-type-ppp  (s) - sgsn            (4) - sgsn-pdp-type-ip
+|             (6) - sgsn-pdp-type-ipv6 (2) - sgsn-pdp-type-ipv4-ipv6
+|             (L) - pdif-simple-ip     (K) - pdif-mobile-ip  (o) - femto-ip
+|             (F) - standalone-fa
+|             (e) - ggsn-mbms-ue       (U) - pdg-ipsec-ipv4
+|             (E) - ha-mobile-ipv6     (T) - pdg-ssl         (v) - pdg-ipsec-ipv6
+|             (f) - hnbgw-hnb          (g) - hnbgw-iu        (x) - s1-mme
+|                                      (k) - PCC
+|             (X) - HSGW               (n) - ePDG            (t) - henbgw-ue
+|             (m) - henbgw-henb        (q) - wsg-simple-ip   (r) - samog-pmip
+|             (D) - bng-simple-ip      (l) - pgw-pmip        (3) - GILAN
+|             (u) - Unknown
+|             (+) - samog-eogre        (%) - eMBMS-ipv4      (!) - eMBMS-ipv6
+|
+|+----Access  (X) - CDMA 1xRTT         (E) - GPRS GERAN      (I) - IP
+||    Tech:   (D) - CDMA EV-DO         (U) - WCDMA UTRAN     (W) - Wireless LAN
+||            (A) - CDMA EV-DO REVA    (G) - GPRS Other      (M) - WiMax
+||            (C) - CDMA Other         (N) - GAN             (O) - Femto IPSec
+||            (P) - PDIF               (S) - HSPA            (L) - eHRPD
+||            (T) - eUTRAN             (B) - PPPoE           (F) - FEMTO UTRAN
+||                                     (Q) - WSG             (.) - Other/Unknown
+||
+||+---Call    (C) - Connected          (c) - Connecting
+|||   State:  (d) - Disconnecting      (u) - Unknown
+|||           (r) - CSCF-Registering   (R) - CSCF-Registered
+|||           (U) - CSCF-Unregistered
+|||
+|||+--Access  (A) - Attached           (N) - Not Attached
+||||  CSCF    (.) - Not Applicable
+||||  Status:
+||||
+||||+-Link    (A) - Online/Active      (D) - Dormant/Idle
+||||| Status:
+|||||
+|||||+Network (I) - IP                 (M) - Mobile-IP         (L) - L2TP
+||||||Type:   (P) - Proxy-Mobile-IP    (i) - IP-in-IP          (G) - GRE
+||||||        (V) - IPv6-in-IPv4       (S) - IPSEC             (C) - GTP
+||||||        (A) - R4 (IP-GRE)        (T) - IPv6              (u) - Unknown
+||||||        (W) - PMIPv6(IPv4)       (Y) - PMIPv6(IPv4+IPv6) (R) - IPv4+IPv6
+||||||        (v) - PMIPv6(IPv6)       (/) - GTPv1(For SAMOG)  (+) - GTPv2(For SAMOG)
+||||||
+||||||
+vvvvvv CALLID   MSID            USERNAME               IP                                 TIME-IDLE
+------ -------- --------------- ---------------------- ----------------------------- ---------
+nWCNAI 05f62f23 200560000000001 0200560000000001@syfer.com 2.2.0.1                       00h00m09s
+WWCNAI 05f62f24 200560000000001 9876543240@apn1.3gpp.com 2.2.0.1                       00h00m09s
+
+Total subscribers matching specified criteria: 2
+[local]DI-EPDG#
+[local]DI-EPDG#
+[local]DI-EPDG# ip a
+Friday May 20 14:26:43 EDT 2016
+Unknown command - "ip", unrecognized keyword
