@@ -13,14 +13,14 @@ PCRF : The PCRF (Policy and Charging Rules Function) determines policy rules in 
 
 The Cisco® ePDG (evolved Packet Data Gateway) enables mobile operators to provide secure access to the 3GPP E- UTRAN/EPC (Evolved UTRAN/Evolved Packet Core) network from untrusted non-3GPP IP access networks. The ePDG functions as a security gateway to provide network security and internet working control via IPSec tunnel establishment based on information obtained during 3GPP AAA (Authentication, Authorization, and Accounting). The ePDG enables mobile operators to extend wireless service coverage, reduce the load on the macro wireless network, and make use of existing backhaul infrastructure to reduce the cost of carrying wireless calls. 
 The ePDG has the following key features: 
-	•   Support for the IPSec/IKEv2-based SWu interface between the ePDG and the WLAN (Wireless LAN) UEs. 
-	•   Routing of packets between the WLAN UEs and the Cisco P-GW (Packet Data Network Gateway) over the S2b interface via GTPv2 or PMIPv6 (Proxy Mobile IP version 6) protocol. 
-	•   P-GW selection via DNS client functionality to provide PDN (Packet Data Network) connectivity to the WLAN UEs. 
-	•   Support for passing assigned IPv4/IPv6 address configurations from the P-GW to the WLAN UEs. 
-	•   Support for the Diameter-based SWm interface between the ePDG and the external 3GPP AAA server. 
-	•   Tunnel authentication and authorization for IPSec/PMIPv6/GTPv2 tunnels using the EAP-AKA (Extensible Authentication Protocol - Authentication and Key Agreement) authentication method between the 3GPP AAA server and the WLAN UEs. 
-	•   Encapsulation and decapsulation of packets sent over the IPSec/PMIPv6/GTPv2 tunnels. 
-	•   Hosts a MAG (Mobile Access Gateway) function, which acts as a proxy mobility agent in the E-UTRAN/EPC network and uses PMIPv6 signaling to provide network-based mobility management on behalf of the WLAN UEs attached to the network. 
+	• Support for the IPSec/IKEv2-based SWu interface between the ePDG and the WLAN (Wireless LAN) UEs. 
+	• Routing of packets between the WLAN UEs and the Cisco P-GW (Packet Data Network Gateway) over the S2b interface via GTPv2 or PMIPv6 (Proxy Mobile IP version 6) protocol. 
+	• P-GW selection via DNS client functionality to provide PDN (Packet Data Network) connectivity to the WLAN UEs. 
+	• Support for passing assigned IPv4/IPv6 address configurations from the P-GW to the WLAN UEs. 
+	• Support for the Diameter-based SWm interface between the ePDG and the external 3GPP AAA server. 
+	• Tunnel authentication and authorization for IPSec/PMIPv6/GTPv2 tunnels using the EAP-AKA (Extensible Authentication Protocol - Authentication and Key Agreement) authentication method between the 3GPP AAA server and the WLAN UEs. 
+	• Encapsulation and decapsulation of packets sent over the IPSec/PMIPv6/GTPv2 tunnels. 
+	• Hosts a MAG (Mobile Access Gateway) function, which acts as a proxy mobility agent in the E-UTRAN/EPC network and uses PMIPv6 signaling to provide network-based mobility management on behalf of the WLAN UEs attached to the network. 
 
 
 
