@@ -1,0 +1,28 @@
+EPDG Call Flow
+=================
+1. IKE_SA_INIT/34 from syfer to EPDG context  			// ikev2 and ipsek transform set for negotiation
+2. IKE_SA_INIT/34 from EPDG to syfer    			// return back with its own ikev2 and ipsek transform set for negotiation
+3. IKE_AUTH/35 syfer to EPDG   			 // syfer accepts the ipsec and ikev2 negotiations 
+	a. this time there is a payload with 0.0.0.0 IP requesting for IP for the subs from ip pool 
+4. Diameter-EAP-Request from EPDG to AAA to authenticate subsriber that came from syfer 
+	a. subs info like IMSI, apn name, msk, ki, op should match the one coming from syfer and in AAA
+	b. this can be found in syfer.conf and aaa.conf in test tools
+5. AAA responds with Diameter-EAP-Answer 
+	a. if it can find a subs in its database matching the subs imsi and apn and all other info then it sends out an authorization authenticate
+	b. along with that subs bndwidth UL and DL speed is also sent out 
+6. IKE_AUTH/35 is sent from EPDG to Syfer with IKEV2_EAP_PAYLOAD_CODE_REQUEST/1 
+7. IKE_AUTH/35 is returned back from Syfer to EPDG with IKEV2_EAP_PAYLOAD_CODE_RESPONSE/2
+8. Another Diameter-EAP-Request goes out from EPDG to AAA 
+9. AAA repnds with Diameter-EAP-Answer
+10. EPDG sends a IKEV2_EAP_PAYLOAD_CODE_SUCCESS/3  to Syfer 
+11. Syfer sends out a SHARED_KEY_MESSAGE_INTEGRITY_CODE/2 to EPDG 
+12. EPDG now sends out a EGTP_CREATE_SESSION_REQUEST to PGW to get an IP Address for the UE. s2b > s5-PGW
+	a. with apn that UE wants to attach to. If APN is not present then session wont be creted
+	b. Also with UL and DL speed authorized to UE from AAA 
+	c. Interface is ePDG S2b DATA
+13.  PGW responds with EGTP_CREATE_SESSION_RESPONSE
+	a. if everything matches and there is an apn and pool then EGTP_CAUSE_REQ_ACCEPTED  with an IP Address for UE 
+	b. if not then it is delicined and session is terminated and message is sent to Syfer that it got declined from PGW 
+	c. check apn name and make sure everything is correct. 
+14.  EPDG sends a IKEV2_CFG_ATTRIBUTE_INTERNAL_IP4_ADDRESS/1 to Syfer with the IP address for UE sent from PGW 
+15. Session comes up. Check in DI - show subs all 
